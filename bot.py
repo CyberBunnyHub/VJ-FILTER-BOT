@@ -1,3 +1,36 @@
+import logging
+import asyncio
+from pyrogram import Client
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+app = Client("my_bot")
+
+@app.on_message()
+async def handle_messages(client, message):
+    logger.info(f"Received message from {message.from_user.id}: {message.text}")
+
+async def heartbeat():
+    while True:
+        logger.info("Bot is alive and running...")
+        await asyncio.sleep(300)  # every 5 minutes
+
+async def main():
+    logger.info("Starting bot...")
+    await app.start()
+    logger.info("Bot started.")
+    asyncio.create_task(heartbeat())
+    await idle()  # pyrogram's idle loop
+    await app.stop()
+    logger.info("Bot stopped.")
+
+if __name__ == "__main__":
+    try:
+        asyncio.run(main())
+    except Exception as e:
+        logger.exception("Unhandled exception occurred:")
+        
 # Don't Remove Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
