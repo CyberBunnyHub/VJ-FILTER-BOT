@@ -1,3 +1,9 @@
+import motor.motor_asyncio
+import asyncio
+
+loop = asyncio.get_event_loop_policy().get_event_loop()
+motor_client = motor.motor_asyncio.AsyncIOMotorClient(uri, io_loop=loop)
+
 import logging
 import asyncio
 from pyrogram import Client
