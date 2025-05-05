@@ -10,14 +10,14 @@ from Script import script
 id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
-SESSION = environ.get('SESSION', 'TechVJBot')
+SESSION = environ.get('SESSION', 'GandhiNote')
 API_ID = int(environ.get('API_ID', '14853951'))
 API_HASH = environ.get('API_HASH', '0a33bc287078d4dace12aaecc8e73545')
 BOT_TOKEN = environ.get('BOT_TOKEN', "7845318227:AAH6djCnd2AsPFjY2WQ5jKZwAwH1U93gMoE")
 
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
-PICS = (environ.get('PICS', 'https://i.ibb.co/dJw7sbCh/5a5b38ed84fb.jpg')).split()
+PICS = (environ.get('PICS', 'https://envs.sh/kPh.jpg')).split()
 
 
 # Admins & Users
@@ -178,7 +178,7 @@ AUTO_APPROVE_MODE = bool(environ.get('AUTO_APPROVE_MODE', False)) # Set True or 
 
 
 # Start Command Reactions
-REACTIONS = ["😇", "😍", "👍", "🎅", "🥰", "🤩", "🤣", "😘", "😛", "😈", "🎉", "⚡️", "🫡", "🤓", "😎", "🔥", "🤭", "👻", "😁"] #don't add any emoji because tg not support all emoji reactions
+REACTIONS = ["🎅", "🎉", "🤓", "😎"] #don't add any emoji because tg not support all emoji reactions
 
 
 if MULTIPLE_DATABASE == False:
