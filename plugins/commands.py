@@ -1,25 +1,3 @@
-from pyrogram import Client, filters
-# ... earlier in your file
-def is_valid_base64(s):
-    try:
-        base64.urlsafe_b64decode(s + "=" * (-len(s) % 4))
-        return True
-    except Exception:
-        return False
-
-# inside your start function
-@Client.on_message(filters.command("start"))
-async def start(client, message):
-    # your existing logic to get file_id
-    file_id = ...  # however you're extracting it
-
-    if not is_valid_base64(file_id):
-        await message.reply("Invalid or corrupted file ID. Please check the link and try again.")
-        return
-
-    file = await client.download_media(file_id)
-    # rest of your logic
-
 # Don't Remove Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
