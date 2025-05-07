@@ -13,7 +13,7 @@ id_pattern = re.compile(r'^.\d+$')
 SESSION = environ.get('SESSION', 'GandhiNote')
 API_ID = int(environ.get('API_ID', '14853951'))
 API_HASH = environ.get('API_HASH', '0a33bc287078d4dace12aaecc8e73545')
-BOT_TOKEN = environ.get('BOT_TOKEN', "7845318227:AAH6djCnd2AsPFjY2WQ5jKZwAwH1U93gMoE")
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
