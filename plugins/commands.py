@@ -1,3 +1,4 @@
+from pyrogram import Client, filters
 # ... earlier in your file
 def is_valid_base64(s):
     try:
