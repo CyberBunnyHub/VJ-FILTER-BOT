@@ -1,3 +1,11 @@
+async def get_shortlink(chat_id, url):
+    try:
+        link = await shortzy.convert(url)
+    except Exception as e:
+        print(f"[Shortener Error] {e}\nUsing original link as fallback.")
+        link = url  # fallback to original URL if shortening fails
+    return link
+    
 # Don't Remove Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
